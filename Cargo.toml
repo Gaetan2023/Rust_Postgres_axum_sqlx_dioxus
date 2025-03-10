@@ -1,0 +1,18 @@
+[package]
+name = "axum-backend"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+axum = "0.8.1"
+dioxus = "0.6.3"
+dioxus-ssr = "0.6.2"
+tokio = { version = "1.43.0", features = ["full"] }
+sqlx = {version ="0.6.3", features=["postgres","macros","runtime-tokio-rustls"]}
+dotenvy = "0.15.7"
+serde = { version= "1.0.163",features = ["derive"]}
+
+[profile.dev.packages.sqlx-macros]
+opt-level = 3 
+
+
